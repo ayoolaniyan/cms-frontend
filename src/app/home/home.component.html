@@ -1,0 +1,16 @@
+<div style="margin:auto; width: 70%; margin-top: 30px;">
+  <app-search-bar (onSelectedOption)="onSelectedOption($event)"></app-search-bar>
+</div>
+<h2 style="text-align:center">Companies</h2>
+
+<div *ngIf="searchFieldSelected">
+  <div>
+    <div *ngFor="let posts of post" class="group">
+      <p><b>Title :</b> {{posts.title}}</p>
+      <p><b>Content: </b>{{posts.content}}</p>
+      <div class="post-image">
+        <img [src]="posts.imagePath" [alt]="posts.title">
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<mat-card>
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <form (submit)="onAddAccount(accountForm)" #accountForm="ngForm" *ngIf="!isLoading">
+    <mat-card-header>
+      <h2>Add Profile Details</h2>
+    </mat-card-header>
+    <mat-card-subtitle>
+      <p>It’s quick and easy.</p>
+    </mat-card-subtitle>
+    <mat-card-content>
+      <mat-form-field class="form-group">
+        <input class="form-control" matInput ngModel type="text" name="firstname" placeholder="First Name" #firstnameInput="ngModel" required firstname>
+      </mat-form-field>
+      <mat-error *ngIf="firstnameInput.invalid && firstnameInput.touched">Please enter a valid name.</mat-error>
+
+      <mat-form-field class="form-group">
+        <input class="form-control" matInput type="text" ngModel name="lastname" placeholder="Last Name" #lastnameInput="ngModel" required>
+      </mat-form-field>
+      <mat-error *ngIf="lastnameInput.invalid && lastnameInput.touched">Please enter a valid password</mat-error>
+    </mat-card-content>
+    <mat-card-footer>
+      <button mat-raised-button color="accent" type="submit" *ngIf="!isLoading">Save</button>
+    </mat-card-footer>
+  </form>
+</mat-card>

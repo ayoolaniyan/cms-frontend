@@ -1,0 +1,8 @@
+
+<mat-list>
+  <div mat-subheader>Your profile details</div>
+  <mat-list-item *ngIf="!isLoading && userProfile">
+    <div mat-line>First Name: {{userProfile.firstname}}</div>
+    <div mat-line>Last Name: {{userProfile.lastname}} </div>
+  </mat-list-item>
+</mat-list>

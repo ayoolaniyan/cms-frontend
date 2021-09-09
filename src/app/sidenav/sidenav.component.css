@@ -1,0 +1,19 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover, a:active{
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.nav-caption{
+  display: inline-block;
+  padding-left: 6px;
+}
+
+mat-nav-list{
+  margin-top: 4rem;
+}
+
+
